@@ -4,6 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtUtils;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.InteractionHand;
@@ -182,6 +183,7 @@ public class MineralCompassItem extends CompassItem {
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
         int idx = getTargetIndex(stack);
         String name = friendlyName(TARGETS[idx].getPath());
-        tooltip.add(Component.literal("Objetivo: " + name));
+        tooltip.add(Component.translatable("item.materialscompass.target", name, true));
+        tooltip.add(Component.translatable("item.materialscompass.wipcretiveonly"));
     }
 }
