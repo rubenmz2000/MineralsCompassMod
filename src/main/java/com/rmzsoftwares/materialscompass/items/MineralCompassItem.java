@@ -75,7 +75,7 @@ public class MineralCompassItem extends CompassItem {
                 tag.remove("LodestonePos");
                 tag.remove("LodestoneDimension");
                 tag.remove("LodestoneTracked");
-                player.displayClientMessage(Component.literal("Ningun mineral encontrado cerca."), true);
+                player.displayClientMessage(Component.translatable("item.materialscompass.noelementfound"), true);
             }
         }
         return InteractionResultHolder.sidedSuccess(stack, level.isClientSide);
@@ -183,7 +183,7 @@ public class MineralCompassItem extends CompassItem {
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
         int idx = getTargetIndex(stack);
         String name = friendlyName(TARGETS[idx].getPath());
-        tooltip.add(Component.translatable("item.materialscompass.target", name, true));
+        tooltip.add(Component.translatable("item.materialscompass.target", name));
         tooltip.add(Component.translatable("item.materialscompass.wipcretiveonly"));
     }
 }

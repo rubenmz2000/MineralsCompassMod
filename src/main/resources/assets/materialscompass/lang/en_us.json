@@ -1,5 +1,6 @@
 {
   "item.materialscompass.mineral_compass": "Minerals compass",
   "item.materialscompass.target": "Target: %s",
-  "item.materialscompass.wipcretiveonly": "§6[WIP] Experimental item - Survival crafting not implemented yet!"
+  "item.materialscompass.wipcreativeonly": "§6[WIP] Experimental item - Survival crafting not implemented yet!",
+  "item.materialscompass.noelementfound": "No element found."
 }
